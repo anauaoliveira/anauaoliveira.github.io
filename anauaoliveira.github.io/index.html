@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Anauã Oliveira — Engenheira de Software</title>
+<meta name="description" content="Portfólio de Anauã Oliveira, engenheira de software full stack: arquitetura de sistemas, backend, frontend, nuvem, segurança e IA.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,500;0,700;1,500;1,700&family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+:root{--bg:#0D1117;--bg2:#161B22;--bg3:#21262D;--fg:#F0F6FC;--mut:#8B949E;--acc:#58A6FF;--acc2:#00D4AA;--line:rgba(139,148,158,.22);--glass:rgba(22,27,34,.62);--lab:Inter,system-ui,sans-serif;--mono:"JetBrains Mono",ui-monospace,Menlo,monospace;--hd:"Playfair Display",Georgia,serif;--sc:"Great Vibes","Snell Roundhand",cursive;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root[data-theme="light"]{--bg:#F8FAFC;--bg2:#fff;--bg3:#E6ECF3;--fg:#0A192F;--mut:#475569;--acc:#3B82F6;--acc2:#0B9C80;--line:rgba(10,25,47,.16);--glass:rgba(255,255,255,.7)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px;color-scheme:dark}
+html[data-theme="light"]{color-scheme:light}
+body{background:var(--bg);color:var(--fg);font:500 1.15rem/1.6 "Cormorant Garamond",Georgia,serif;overflow-x:hidden;transition:background .4s,color .4s}
+body::before{content:"";position:fixed;inset:0;z-index:-1;background:linear-gradient(var(--line) 1px,transparent 1px) 0 0/48px 48px,linear-gradient(90deg,var(--line) 1px,transparent 1px) 0 0/48px 48px;opacity:.35;-webkit-mask:radial-gradient(ellipse at 50% 20%,#000,transparent 75%);mask:radial-gradient(ellipse at 50% 20%,#000,transparent 75%)}
+#bg,#tech{position:fixed;inset:0;z-index:-1;pointer-events:none}#tech{overflow:hidden}#tech span{position:absolute;font:600 var(--sz,1rem) var(--mono);color:var(--c);opacity:.17;white-space:nowrap;animation:fl var(--d) ease-in-out infinite alternate}@keyframes fl{from{transform:translateY(0) rotate(-5deg)}to{transform:translateY(-36px) rotate(5deg)}}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--acc2);outline-offset:3px}
+#pre{position:fixed;inset:0;z-index:99;background:var(--bg);display:grid;place-items:center;transition:opacity .6s,visibility .6s}
+#pre.off{opacity:0;visibility:hidden}
+#pre b{font:400 3rem var(--sc)}
+#pre i{display:block;height:2px;margin-top:10px;background:linear-gradient(90deg,var(--acc),var(--acc2));animation:ld 1s ease forwards;width:0}
+@keyframes ld{to{width:100%}}
+header{position:fixed;top:0;left:0;right:0;z-index:50;padding:calc(env(safe-area-inset-top,0px) + 12px) 5vw 12px;display:flex;align-items:center;gap:12px;background:var(--glass);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.logo{font:600 .78rem var(--lab);letter-spacing:.3em;margin-right:auto}
+.ib{border:1px solid var(--line);background:var(--bg2);color:var(--fg);border-radius:8px;padding:7px 12px;font:600 .72rem var(--lab);letter-spacing:.14em;cursor:pointer;white-space:nowrap}
+#mn{position:fixed;inset:0;z-index:70;background:var(--bg);display:none;flex-direction:column;justify-content:center;padding:0 8vw}
+#mn.on{display:flex}
+#mn a{display:block;font:600 .8rem var(--lab);letter-spacing:.22em;text-transform:uppercase;padding:14px 0;border-bottom:1px solid var(--line);max-width:340px;transition:.2s}#mn a:hover{color:var(--acc2);padding-left:10px}
+#mn small{font:.72rem var(--lab);letter-spacing:.2em;color:var(--mut);margin-bottom:12px}
+header{padding:calc(env(safe-area-inset-top,0px) + 14px) 4vw 14px;gap:14px}
+.brand{display:flex;align-items:center;gap:14px}
+.mono,.mono2{font:400 2.7rem/1 var(--sc);background:linear-gradient(135deg,#F5E7C8,#C9A66B);-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.12em}
+.bn b{display:block;font:400 1.9rem/1 var(--sc)}
+.bn small{display:block;font:600 .56rem var(--lab);letter-spacing:.38em;color:var(--mut);margin-top:3px}
+#hn{display:flex;gap:2px;margin:0 auto 0 18px;padding-left:22px;border-left:1px solid var(--line)}
+#hn a{font:600 .68rem var(--lab);letter-spacing:.16em;text-transform:uppercase;padding:10px 12px;border-bottom:2px solid transparent;color:var(--mut);transition:.2s}
+#hn a:hover,#hn a.on{color:var(--fg);border-color:var(--acc)}
+.dl{border:1px solid #C9A66B;border-radius:99px;padding:11px 22px;font:600 .68rem var(--lab);letter-spacing:.14em;white-space:nowrap;transition:.2s}.dl:hover{background:rgba(201,166,107,.15)}
+#cpb{display:none}
+@media(max-width:1100px){#hn,.dl{display:none}.brand{margin-right:auto}}
+@media(min-width:1101px){#mb{display:none}}
+section{padding:96px 5vw 24px;max-width:1200px;margin:auto}
+#home{max-width:none;padding:0;margin:0;min-height:100vh;display:flex;flex-direction:column;align-items:stretch;gap:0}
+#home::after{display:none}
+.hero{flex:1;width:100%;max-width:1400px;margin:auto;padding:150px 5vw 30px;display:grid;grid-template-columns:1.1fr 1fr;gap:20px;align-items:center}
+.hl .rule{display:block;width:60px;height:2px;background:var(--fg);margin:26px 0 14px}
+h1{font:700 clamp(2.1rem,5.2vw,4.4rem)/1.05 var(--hd);letter-spacing:0;text-transform:uppercase;margin:0 0 20px}
+h1 span{display:block;background:linear-gradient(180deg,var(--fg) 35%,var(--mut));-webkit-background-clip:text;background-clip:text;color:transparent}
+h1 em{display:block;text-transform:none;font:400 1.45em/1.05 var(--sc);padding:.05em .1em .1em 0;background:linear-gradient(90deg,#2F7BFF,var(--acc));-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{border-left:3px solid var(--acc);padding-left:18px;font-size:1.3rem;max-width:34rem;margin:0 0 26px}
+.hr{position:relative;min-height:540px}
+#gl{position:absolute;inset:0;width:100%;height:100%}
+.hr .term{position:absolute;left:0;top:4%;width:min(280px,62%);background:rgba(13,25,47,.6);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-color:rgba(88,166,255,.5);transform:perspective(900px) rotateY(-14deg) rotateX(6deg) rotateZ(-3deg)}
+.hr .term pre{min-height:150px;color:var(--acc);font-size:.8rem}
+.mono2{position:absolute;left:60%;top:46%;transform:translate(-50%,-50%);font-size:clamp(6rem,16vw,11rem);opacity:.9;pointer-events:none}
+.side{position:absolute;right:0;bottom:20%;border-right:2px solid var(--acc);padding-right:16px;text-align:right;font:600 .7rem/1.9 var(--lab);letter-spacing:.5em;color:var(--mut)}
+.side #up{display:block;letter-spacing:.1em;font-size:.58rem;color:var(--acc2);margin-top:8px}
+.bar{border-top:1px solid var(--line);background:var(--glass);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);padding:22px 5vw;display:flex;flex-wrap:wrap;gap:24px 44px;align-items:center;justify-content:space-between}
+.sts{display:flex;flex-wrap:wrap;gap:24px 44px}
+.st{display:flex;gap:14px;align-items:center}.st .ic{font-size:1.9rem;color:var(--acc);line-height:1}
+.st b{display:block;font:600 1.5rem/1.1 var(--lab)}.st small{font:.8rem var(--lab);color:var(--mut)}
+.ts small{display:block;font:600 .62rem var(--lab);letter-spacing:.22em;margin-bottom:6px}
+#core{display:flex;gap:16px;align-items:center}#core span{font:600 1.25rem var(--lab)}
+.scr{display:flex;align-items:center;justify-content:center;gap:18px;padding:18px 0 26px;font:600 .62rem var(--lab);letter-spacing:.4em;color:var(--mut)}
+.scr::before,.scr::after{content:"";height:1px;width:16vw;background:var(--line)}
+.scr i{font-style:normal;border:1px solid var(--acc);color:var(--acc);border-radius:50%;width:32px;height:32px;display:grid;place-items:center;letter-spacing:0}
+#about>h2{font:500 clamp(1.4rem,3vw,2.1rem) var(--hd);letter-spacing:.5em;text-transform:uppercase;display:flex;align-items:center;gap:22px}
+#about>h2::before{content:"";width:80px;height:2px;background:var(--acc)}
+.ab{display:grid;grid-template-columns:1.3fr 1fr;gap:24px;align-items:start}
+.ab p{margin-bottom:14px;font-size:1.25rem}
+.fx{list-style:none;margin-top:10px}.fx li{padding:9px 0;border-bottom:1px solid var(--line);font-size:1.1rem}
+.fx span{display:block;font:600 .6rem var(--lab);letter-spacing:.16em;color:var(--acc);text-transform:uppercase}
+.sh{font:italic 500 1.8rem var(--hd);margin:38px 0 10px}
+.bars div{margin:12px 0}.bars>div>span{display:flex;justify-content:space-between;font:600 .72rem var(--lab);letter-spacing:.06em;margin-bottom:5px}
+.bars i{display:block;height:6px;background:var(--bg3);border-radius:9px;position:relative;overflow:hidden}
+.bars i::after{content:"";position:absolute;inset:0;width:var(--w);border-radius:9px;background:linear-gradient(90deg,var(--acc),var(--acc2));transform:scaleX(0);transform-origin:left;transition:transform 1.3s ease}
+.bars.in i::after{transform:scaleX(1)}
+@media(max-width:900px){.hero{grid-template-columns:1fr;padding-top:130px}.hr{min-height:420px}.ab{grid-template-columns:1fr}.side{display:none}}
+.k{font:600 .7rem var(--lab);letter-spacing:.2em;color:var(--acc2);text-transform:uppercase}
+h2{font:italic 500 clamp(2rem,4.6vw,3.2rem)/1.15 var(--hd);margin:8px 0 14px}
+.lead{color:var(--mut);max-width:62ch;margin-bottom:28px;font-size:1.3rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+.card{background:var(--glass);border:1px solid var(--line);border-radius:14px;padding:22px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:transform .25s,border-color .25s}
+.card:hover{transform:translateY(-4px);border-color:var(--acc)}
+.card h3{font:italic 600 1.35rem var(--hd);margin-bottom:6px}.card p{color:var(--mut);font-size:1.12rem}
+.card .t{font:600 .62rem var(--lab);letter-spacing:.16em;color:var(--acc);margin-bottom:8px;display:block}
+.chip{display:inline-block;font:.72rem var(--lab);padding:4px 11px;border:1px solid var(--line);border-radius:99px;margin:3px 4px 3px 0;color:var(--mut)}
+.btn{display:inline-block;padding:13px 22px;border-radius:99px;font:600 .74rem var(--lab);letter-spacing:.14em;border:1px solid var(--acc);color:var(--fg);cursor:pointer;background:transparent;transition:.2s;margin:0 8px 8px 0}
+.btn.p{background:linear-gradient(135deg,var(--acc),var(--acc2));color:#06121a;border:0}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(88,166,255,.25)}
+#home{padding-top:130px;display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center;min-height:100vh;position:relative}
+#home::after{content:"";position:absolute;width:520px;height:520px;right:-120px;top:10%;background:radial-gradient(circle,rgba(88,166,255,.22),transparent 65%);z-index:-1;pointer-events:none}
+h1{font:700 clamp(2.8rem,8vw,5.6rem)/1.02 var(--hd);letter-spacing:-.02em;margin:16px 0}
+h1 em{font:400 1.25em/.9 var(--sc);background:linear-gradient(90deg,var(--acc),var(--acc2));-webkit-background-clip:text;background-clip:text;color:transparent;padding-right:.1em}
+.pill{display:inline-flex;gap:8px;align-items:center;font:600 .64rem var(--lab);letter-spacing:.14em;padding:6px 12px;border:1px solid var(--line);border-radius:99px;background:var(--glass)}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--acc2);box-shadow:0 0 10px var(--acc2);animation:pl 2s infinite}
+@keyframes pl{50%{opacity:.35}}
+.term{background:var(--bg2);border:1px solid var(--line);border-radius:14px;overflow:hidden;font:.82rem/1.7 var(--mono);transition:transform .15s}
+.term .bar{padding:10px 14px;background:var(--bg3);display:flex;gap:6px}.term .bar i{width:10px;height:10px;border-radius:50%;background:var(--mut);opacity:.6}
+.term pre{padding:16px;min-height:190px;white-space:pre-wrap;color:var(--acc2)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:10px}
+.stats .card{text-align:center}.stats b{display:block;font:400 2.8rem var(--sc);color:var(--acc)}
+.flt{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.flt button,.tabs button{font:600 .68rem var(--lab);letter-spacing:.06em;padding:8px 14px;border-radius:99px;border:1px solid var(--line);background:var(--bg2);color:var(--mut);cursor:pointer}
+.flt button.on,.tabs button.on{background:var(--acc);color:#06121a;border-color:var(--acc)}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.arch{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.arch button{font:600 .78rem var(--lab);padding:14px 18px;border:1px dashed var(--acc);background:var(--bg2);color:var(--fg);border-radius:10px;cursor:pointer}
+.arch button.on{background:var(--acc);color:#06121a;border-style:solid}.arch span{color:var(--acc2)}
+#ad{margin-top:14px;min-height:60px}
+.tl{border-left:2px solid var(--line);padding-left:22px}.tl div{position:relative;margin-bottom:22px}
+.tl div::before{content:"";position:absolute;left:-29px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--acc2)}
+.tl b{font:600 .7rem var(--lab);letter-spacing:.12em;color:var(--acc)}.tl h3{font:italic 600 1.35rem var(--hd)}
+.gh{display:grid;grid-template-columns:repeat(26,1fr);gap:3px;margin:14px 0}.gh i{aspect-ratio:1;border-radius:2px;background:var(--acc2)}
+pre.code{background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:18px;overflow-x:auto;font:.8rem/1.7 var(--mono)}
+.c1{color:var(--acc)}.c2{color:var(--acc2)}.c3{color:var(--mut)}
+details{border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin-bottom:10px;background:var(--glass)}
+summary{cursor:pointer;font:italic 600 1.2rem var(--hd)}details p{color:var(--mut);margin-top:8px}
+blockquote{font:400 2.2rem/1.2 var(--sc);margin-top:30px;padding-left:18px;border-left:3px solid var(--acc2)}
+.sig{font:400 1.8rem var(--sc);color:var(--acc2)}
+form{display:grid;gap:12px;max-width:520px;margin-top:18px}
+input,textarea{background:var(--bg2);color:var(--fg);border:1px solid var(--line);border-radius:10px;padding:12px;font:inherit}
+footer{position:relative;margin-top:90px;padding:52px 5vw calc(44px + env(safe-area-inset-bottom,0px));background:radial-gradient(ellipse at 92% 100%,rgba(212,175,106,.14),transparent 55%),#040404;border-top:1px solid rgba(212,175,106,.4);overflow:hidden;color:#F1ECE2}
+footer .in{position:relative;z-index:1;max-width:1250px;margin:auto}
+footer .wv{position:absolute;right:0;bottom:0;width:min(58%,780px);height:100%;pointer-events:none}
+footer .cd{position:absolute;right:-24px;top:14px;width:290px;font:.78rem/1.9 var(--mono);color:#5FA8FF;opacity:.4;transform:perspective(600px) rotateY(-16deg);-webkit-mask:linear-gradient(90deg,transparent,#000 45%,transparent);mask:linear-gradient(90deg,transparent,#000 45%,transparent);pointer-events:none}
+footer .cd span{display:block;white-space:nowrap}
+.fh{display:flex;align-items:center;gap:30px;margin-bottom:26px}
+.fm{font:400 clamp(4rem,9vw,6.4rem)/1 var(--sc)}
+.fm,.fn{background:linear-gradient(120deg,#8A6A33,#F2DBA0 35%,#D4AF6A 60%,#FFF0C4 82%,#B88A44);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 12px rgba(212,175,106,.35));padding-right:.12em}
+.fh>i{width:2px;align-self:stretch;min-height:96px;background:linear-gradient(#D4AF6A,rgba(212,175,106,.3))}
+.fn{font:400 clamp(3rem,8vw,6.2rem)/1.05 var(--sc)}
+.fs{font:500 clamp(.6rem,1.4vw,.8rem) var(--lab);letter-spacing:.3em;text-transform:uppercase;color:#DAD3C6;margin-top:6px}
+.gl{height:1px;background:linear-gradient(90deg,#B88A44,rgba(212,175,106,.2) 82%,transparent)}
+.fr{display:flex;flex-wrap:wrap;align-items:center;gap:18px 0;padding:24px 0}
+.fr>*{display:flex;align-items:center;gap:14px;padding:0 30px;border-left:1px solid rgba(212,175,106,.4);font:500 1.35rem/1.2 "Cormorant Garamond",Georgia,serif;color:#F1ECE2;transition:color .2s}
+.fr>*:first-child{padding-left:0;border-left:0}
+.fr a:hover{color:#E9C46A}
+footer .i{width:30px;height:30px;flex:none;color:#D4AF6A}
+#privacy{margin-top:8px;display:flex;align-items:center;gap:26px;padding:24px 36px;border:1px solid rgba(212,175,106,.6);border-radius:70px;box-shadow:0 0 26px rgba(212,175,106,.15),inset 0 0 26px rgba(212,175,106,.06);max-width:1080px}
+#privacy .i{width:44px;height:44px}
+#privacy>i{width:1px;align-self:stretch;background:#D4AF6A}
+#privacy p{font:500 1.35rem/1.45 "Cormorant Garamond",Georgia,serif;max-width:62ch}
+#privacy b{color:#E9C46A;font-weight:700}
+@media(max-width:900px){footer .cd{display:none}.fh{gap:16px}.fr>*{border-left:0;padding:0 22px 0 0}#privacy{border-radius:28px;padding:20px;gap:16px}#privacy>i{display:none}}
+#cp{position:fixed;inset:0;z-index:80;background:rgba(0,0,0,.55);display:none;align-items:flex-start;justify-content:center;padding-top:14vh}
+#cp.on{display:flex}#cp div{width:min(560px,92vw);background:var(--bg2);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+#cp input{width:100%;border:0;border-bottom:1px solid var(--line);border-radius:0}
+#cp a{display:block;padding:10px 16px;font:.74rem var(--lab);letter-spacing:.08em}#cp a:hover,#cp a.f{background:var(--bg3)}
+#ai{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:60}
+#ai>button{width:54px;height:54px;border-radius:50%;border:0;font-size:1.6rem;cursor:pointer;background:linear-gradient(135deg,var(--acc),var(--acc2))}
+#aw{display:none;position:absolute;right:0;bottom:66px;width:min(340px,88vw);background:var(--bg2);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+#aw.on{display:block}#am{height:260px;overflow-y:auto;padding:12px;display:grid;gap:8px;align-content:start;font-size:1.05rem}
+#am p{padding:8px 12px;border-radius:10px;background:var(--bg3);max-width:90%}#am p.u{background:var(--acc);color:#06121a;justify-self:end}
+#aw form{margin:0;max-width:none;display:flex;padding:8px}#aw input{flex:1}
+.js .r{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}.js .r.in{opacity:1;transform:none}
+@media(max-width:860px){#home{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.js .r{opacity:1;transform:none}}
+h2,.card h3,.sh,.tl h3,summary{font-style:normal!important}
+h2{font-weight:600}.card h3{font-weight:600}
+#about>.k{display:none}
+h1{text-transform:none;font-size:clamp(2.2rem,5vw,4.2rem)}
+.hr{display:flex;flex-direction:column;justify-content:center;gap:22px;min-height:0}
+.hr .term{position:relative;left:auto;top:auto;width:100%;aspect-ratio:16/10;transform:perspective(1100px) rotateY(-5deg)}
+.hr .term pre{font-size:clamp(.85rem,1.5vw,1.25rem);padding:28px;line-height:1.9;min-height:0;height:100%}
+.side{position:static;align-self:flex-end}
+.bar{flex-wrap:nowrap;gap:24px}
+.sts{flex-wrap:nowrap;gap:clamp(16px,2.4vw,40px)}
+.st{white-space:nowrap}.st .ic{font-size:1.6rem}.st b{font-size:1.35rem}.st small{font-size:.74rem}
+.ts{margin-left:auto;padding-left:28px;border-left:1px solid var(--line)}
+#core{gap:12px}#core span{font-size:1.1rem}
+@media(max-width:1180px){.bar,.sts{flex-wrap:wrap}.ts{border-left:0;padding-left:0}}
+#lg{position:fixed;inset:0;z-index:95;background:rgba(0,0,0,.65);display:none;align-items:center;justify-content:center;padding:4vw}
+#lg.on{display:flex}
+.mb{position:relative;background:var(--bg2);border:1px solid var(--line);border-radius:16px;max-width:780px;width:100%;max-height:86vh;overflow-y:auto;padding:30px 34px}
+.mb h2{margin:0 0 6px;font-size:clamp(1.6rem,3.4vw,2.2rem);padding-right:110px}
+.mb h3{font:600 1.25rem var(--hd);margin:22px 0 4px}.mb p{color:var(--mut)}.mb p.k{color:var(--acc2)}
+#lgx{position:absolute;top:22px;right:22px}
+@keyframes mq{to{transform:translateX(-50%)}}
+.rb{width:100%;overflow:hidden;margin:56px 0;display:grid;gap:10px}
+.rb .tk{display:flex;width:max-content;animation:mq var(--sp,40s) linear infinite}
+.rb .tk:hover,.mqw:hover #core{animation-play-state:paused}
+.rb .tk span{display:inline-flex;align-items:center;gap:8px;padding:14px 20px;font:600 .8rem var(--lab);letter-spacing:.18em;text-transform:uppercase;white-space:nowrap}
+.rb .tk span::after{content:"◆";font-size:.55rem;margin-left:22px;opacity:.7}
+.rb .a{background:linear-gradient(90deg,var(--acc),var(--acc2));color:#06121a}
+.rb .b{background:var(--bg2);border-block:1px solid var(--line);color:var(--acc)}
+.mqw{width:230px;overflow:hidden;-webkit-mask:linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent);mask:linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent)}
+#core{gap:0;width:max-content;animation:mq 6s linear infinite}#core span{padding:0 10px}
+.hero{padding-top:104px;align-items:start}.hl{align-self:start}.hr{align-self:center}
+@media(max-width:900px){.hero{padding-top:96px}}
+.hero{padding-top:96px}
+.hl .rule{margin:0 0 16px}
+h1{margin-top:0}
+.hl .pill{margin-top:8px}
+.bar{flex-wrap:wrap}
+.sts{width:100%;justify-content:space-between}
+.ts{flex:0 0 calc(100% + 10vw);margin:0 -5vw -22px;padding:14px 0 16px;border-left:0;border-top:1px solid var(--line)}
+.ts small{padding-left:5vw;margin-bottom:8px}
+.mqw{width:100%;-webkit-mask:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);mask:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent)}
+#core{animation-duration:40s}#core span{font-size:1.4rem;padding:0 24px}
+@media(max-width:900px){.hero{padding-top:90px}}
+#home{display:flex;flex-direction:column;align-items:stretch;gap:0;grid-template-columns:none;padding:0;max-width:none;margin:0;min-height:100vh}
+h1{font:700 clamp(2.2rem,5vw,4.2rem)/1.05 var(--hd);letter-spacing:0;text-transform:none;margin:0 0 20px}
+h1 em{display:block;text-transform:none;font:400 1.45em/1.05 var(--sc);padding:.05em .1em .1em 0;background:linear-gradient(90deg,#2F7BFF,var(--acc));-webkit-background-clip:text;background-clip:text;color:transparent}
+</style>
+</head>
+<body>
+<div id="pre"><div><b>Anauã</b><i></i></div></div>
+<canvas id="bg" aria-hidden="true"></canvas><div id="tech" aria-hidden="true"></div>
+<header>
+<a class="brand" href="#home"><span class="bn"><b>Anauã Oliveira</b><small>ENGENHEIRA DE SOFTWARE</small></span></a>
+<nav id="hn" aria-label="Principal"></nav>
+<button class="ib" id="cpb" aria-label="Abrir paleta de comandos">⌘K</button>
+<button class="ib" id="tg" aria-label="Alternar tema claro e escuro">◐</button>
+<a class="dl" href="cv-anaua-oliveira.pdf" download>BAIXAR CURRÍCULO <span>⤓</span></a>
+<button class="ib" id="mb" aria-expanded="false" aria-controls="mn">MENU ☰</button>
+</header>
+<div id="mn" role="dialog" aria-label="Menu"><small>NAVEGAÇÃO · ESC PARA FECHAR</small><div id="nav"></div></div>
+<main>
+<section id="home">
+<div class="hero">
+<div class="hl r">
+<i class="rule"></i>
+<h1><span>Transformo ideias</span><span>em sistemas que</span><em>encantam pessoas.</em></h1>
+<p class="sub">Engenheira de software full stack com visão de produto: arquitetura sólida, código limpo e entregas que geram resultado de verdade.</p>
+<p><a class="btn p" href="#projects">EXPLORAR MEUS PROJETOS →</a><a class="btn" href="#about">SAIBA MAIS ⌄</a></p>
+<span class="pill"><i class="dot"></i>DISPONÍVEL PARA NOVAS OPORTUNIDADES</span>
+</div>
+<div class="hr r">
+<div class="term" id="tm"><pre id="tp" aria-label="Código animado"></pre></div>
+<div class="side"><div>DESENVOLVER</div><div>INOVAR</div><div>TRANSFORMAR</div><span id="up"></span></div>
+</div>
+</div>
+<div class="bar">
+<div class="sts">
+<div class="st r"><span class="ic">&lt;/&gt;</span><div><b data-n="10" data-s="+">0</b><small>Anos de experiência</small></div></div>
+<div class="st r"><span class="ic">◈</span><div><b data-n="50" data-s="+">0</b><small>Projetos entregues</small></div></div>
+<div class="st r"><span class="ic">☁</span><div><b data-n="99.9" data-s="%">0</b><small>Disponibilidade do sistema</small></div></div>
+<div class="st r"><span class="ic">🏆</span><div><b data-n="20" data-s="+">0</b><small>Certificações</small></div></div>
+</div>
+<div class="ts"><small>STACK TECNOLÓGICA</small><div class="mqw"><div id="core"></div></div></div>
+</div>
+<a class="scr" href="#about">ROLE PARA EXPLORAR <i>↓</i></a>
+</section>
+<div id="root"></div>
+</main>
+<footer>
+<svg class="wv" viewBox="0 0 600 300" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="gg" x1="0" x2="1"><stop offset="0" stop-color="#D4AF6A" stop-opacity="0"/><stop offset=".55" stop-color="#D4AF6A" stop-opacity=".8"/><stop offset="1" stop-color="#FFF0C4"/></linearGradient><filter id="gb"><feGaussianBlur stdDeviation="3"/></filter></defs><g fill="none" stroke="url(#gg)"><path d="M0 300C150 285 260 130 600 55" stroke-width="2.4" filter="url(#gb)"/><path d="M0 300C150 285 260 130 600 55" stroke-width="1.2"/><path d="M40 300C200 292 320 175 600 118" stroke-width="1.4"/><path d="M0 300C200 262 400 285 600 190" stroke-width="1.6"/><path d="M80 300C250 270 420 250 600 230" stroke-width=".8" opacity=".7"/><path d="M0 300C180 255 330 215 600 150" stroke-width=".8" opacity=".6"/></g></svg>
+<div class="cd" aria-hidden="true"><span>const criarImpacto = () =&gt; {</span><span>&nbsp;&nbsp;return {</span><span>&nbsp;&nbsp;&nbsp;&nbsp;codigo: paixao,</span><span>&nbsp;&nbsp;&nbsp;&nbsp;inovacao: true,</span><span>&nbsp;&nbsp;&nbsp;&nbsp;impacto: 'global'</span><span>&nbsp;&nbsp;};</span></div>
+<div class="in">
+<div class="fh"><span class="fm">AO</span><i></i><div><div class="fn">Anauã Oliveira</div><p class="fs">Projetado e desenvolvido · Construído com precisão</p></div></div>
+<div class="gl"></div>
+<div class="fr">
+<a href="https://github.com/anauaoliveira" rel="noopener"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>GitHub</a>
+<a href="https://www.linkedin.com/in/anau%C3%A3-maria-889709261/" rel="noopener"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="3"/><circle cx="7.2" cy="7.6" r="1.6" fill="#050505"/><path fill="#050505" d="M5.8 10h2.8v8H5.8zM10.5 10h2.7v1.2c.4-.7 1.3-1.4 2.7-1.4 2.8 0 3.3 1.8 3.3 4.2V18h-2.8v-3.4c0-.9 0-2-1.3-2s-1.6 1-1.6 2V18h-2.7z"/></svg>LinkedIn</a>
+<a href="mailto:anaua.silva49@hotmail.com"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><rect x="2" y="4.5" width="20" height="15" rx="2"/><path d="M3 7l9 7 9-7" fill="none" stroke="#050505" stroke-width="1.6"/></svg>E-mail</a>
+<span><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Ilhota, SC — Brasil</span>
+<span><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 3v6c0 5-3.5 9-8 11-4.5-2-8-6-8-11V5z"/><rect x="9.5" y="10.5" width="5" height="4" rx=".8"/><path d="M10.5 10.5V9a1.5 1.5 0 0 1 3 0v1.5"/></svg>Assinatura digital: A.O // 2026</span>
+</div>
+<div class="gl"></div>
+<div class="fr">
+<a href="#" data-doc="priv"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/><circle cx="12" cy="16" r="1"/></svg>Política de privacidade</a>
+<a href="#" data-doc="term"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h9l4 4v16H6z"/><path d="M15 2v4h4M9 11h7M9 14h7M9 17h5"/></svg>Termos de uso</a>
+<a href="#home"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V4M5 11l7-7 7 7"/></svg>Voltar ao topo</a>
+<span><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M15 9.5a4 4 0 1 0 0 5"/></svg>© 2026 Anauã Oliveira · Todos os direitos reservados</span>
+</div>
+<div id="privacy"><svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 11v6"/><circle cx="12" cy="7.6" r=".6" fill="currentColor"/></svg><i></i><p>Este site <b>não usa cookies</b> de rastreamento. Os dados enviados pelo formulário são usados apenas para responder ao seu contato. A preferência de tema fica salva somente no seu navegador.</p></div>
+</div>
+</footer>
+<div id="lg" role="dialog" aria-modal="true" aria-labelledby="lgt"><div class="mb"><button class="ib" id="lgx" aria-label="Fechar">FECHAR ✕</button><h2 id="lgt"></h2><div id="lgb"></div></div></div>
+<div id="cp" role="dialog" aria-label="Paleta de comandos"><div><input id="ci" placeholder="Ir para… (Esc fecha)" aria-label="Buscar seção"><nav id="cl"></nav></div></div>
+<div id="ai"><div id="aw"><div id="am" aria-live="polite"></div><form id="af"><input id="aq" placeholder="Pergunte sobre TI, dados, internet…" aria-label="Mensagem"><button class="btn p" style="padding:8px 14px;margin:0">→</button></form></div><button id="ab" aria-label="Abrir chat Core AI">🤖</button></div>
+<script>
+document.documentElement.classList.add("js");
+const $=(s,e=document)=>e.querySelector(s),$$=(s,e=document)=>[...e.querySelectorAll(s)];
+const card=(h,p,t)=>`<article class="card r">${t?`<span class="t">${t}</span>`:""}<h3>${h}</h3><p>${p}</p></article>`;
+const sec=(id,k,t,l,b)=>`<section id="${id}"><p class="k r">${k}</p><h2 class="r">${t}</h2>${l?`<p class="lead r">${l}</p>`:""}${b}</section>`;
+const grid=a=>`<div class="grid">${a.map(c=>card(...c)).join("")}</div>`;
+const chips=a=>a.map(x=>`<span class="chip">${x}</span>`).join("");
+const STACK={"Linguagens de Programação":["TypeScript","Go","Python","Java","SQL","Rust"],"Frameworks Frontend":["React","Next.js","Vue","Tailwind","Three.js"],"Frameworks Backend":["Node.js","NestJS","Spring Boot","FastAPI","gRPC"],"Bancos de Dados":["PostgreSQL","MongoDB","Redis","Elasticsearch","DynamoDB"],"Computação em Nuvem":["AWS","GCP","Azure","Terraform","Serverless"],"DevOps e CI/CD":["GitHub Actions","ArgoCD","Prometheus","Grafana"],"Containerização":["Docker","Kubernetes","Helm"],"Controle de Versão":["Git","GitFlow","Trunk-based"],"Testes e QA":["Jest","Playwright","Cypress","k6","Testcontainers"],"Ferramentas de Segurança":["OWASP ZAP","Snyk","Vault","OAuth2/OIDC"],"IA e Ciência de Dados":["PyTorch","scikit-learn","LangChain","Pandas"],"Arquitetura de Software":["DDD","Microsserviços","Orientada a eventos","CQRS","Hexagonal"]};
+const ARCH=[["Cliente","Web, mobile e CDN: interfaces rápidas, cache agressivo e acessibilidade desde o início."],["API Gateway","Autenticação, limite de requisições, roteamento e observabilidade centralizados."],["Serviços","Microsserviços por domínio (DDD), com comunicação síncrona via gRPC/REST e assíncrona por eventos."],["Barramento de Mensagens","Kafka/RabbitMQ para desacoplar serviços, garantir idempotência e absorver picos de carga."],["Camada de Dados","PostgreSQL, Redis e busca: replicação, particionamento e backups testados."],["Observabilidade","Logs estruturados, métricas, rastreamento distribuído e alertas com SLOs claros."]];
+const PROJ=[["Plataforma SaaS Multi-tenant","Full Stack","Aplicação completa com cobrança, controle de acesso e painéis em tempo real.","React · NestJS · PostgreSQL"],["ERP Corporativo","Corporativo","Módulos financeiro e logístico para operação de grande porte.","Java · Spring · Oracle"],["Painel Analítico","Web","Visualização de dados com carregamento em menos de um segundo.","Next.js · D3 · Redis"],["Plataforma de E-commerce","Web","Catálogo, checkout e painel logístico com foco em conversão e desempenho.","Next.js · Node.js · Stripe"],["App de Gestão de Campo","Mobile","Aplicativo offline-first com sincronização resiliente.","React Native · SQLite"],["Gateway de Pagamentos","APIs e Microsserviços","Microsserviços idempotentes com 99,99% de disponibilidade.","Go · Kafka · gRPC"],["Re-arquitetura de Banco","Banco de Dados","Particionamento e redução de 70% no tempo de consulta.","PostgreSQL · pgBouncer"],["Infraestrutura como Código","Nuvem","Multirregião com deploy automatizado e custo otimizado.","Terraform · AWS · K8s"],["Assistente Inteligente","IA","Busca semântica e respostas contextuais sobre documentos.","Python · LangChain · pgvector"],["Otimização de Performance","Performance","Redução do p95 de 1,8 s para 240 ms em um fluxo crítico.","Profiling · Cache · CDN"]];
+const FAQ=[["Quem sou eu?","Anauã Oliveira, engenheira de software full stack em Ilhota, SC."],["Qual é a minha especialização?","Arquitetura de sistemas, APIs e plataformas escaláveis."],["Com quais tecnologias eu trabalho?","TypeScript, Go, Python, React, Node.js, PostgreSQL, AWS e Kubernetes."],["Que tipos de projeto eu desenvolvo?","SaaS, sistemas corporativos, APIs, aplicativos mobile e soluções com IA."],["Qual é o meu processo de desenvolvimento?","Descoberta, desenho, entrega incremental, testes automatizados e observabilidade."],["Como abordo sistemas complexos?","Dividindo por domínio, decidindo com dados e documentando cada decisão."],["Quais são meus princípios de engenharia?","Simplicidade, SOLID, código limpo, testes e foco no usuário."],["Eu trabalho com clientes?","Sim, em consultoria e projetos sob demanda."],["Estou disponível para novas oportunidades?","Sim, para posições e projetos selecionados."],["Como podemos colaborar?","Por contrato, consultoria pontual ou integrando o seu time."],["Como entrar em contato comigo?","Pelo formulário abaixo, por e-mail ou pelo LinkedIn."],["Onde encontro meus projetos?","Na seção Projetos e no meu GitHub."],["Onde acesso meu currículo?","No botão Baixar Currículo, no topo e na seção Contato."],["Qual é a minha trajetória profissional?","Veja Experiência Profissional e Linha do Tempo da Carreira."]];
+const NAV=[["home","Início"],["about","Sobre"],["expertise","Expertise"],["projects","Projetos"],["experience","Experiência"],["insights","Artigos"],["faq","Perguntas"],["contact","Contato"]];
+const EXP=["Liderança de Engenharia","Desenvolvimento de Software","Design de Sistemas","Tomada de Decisão Técnica","Colaboração em Equipe","Resolução de Problemas","Otimização de Performance","Escalabilidade","Qualidade de Código"];
+let h="";
+h+=sec("about","Sobre mim · Perfil profissional","Sobre mim","Engenharia com precisão, tecnologia com propósito.",`<div class="ab"><div class="r"><p>Sou Anauã Oliveira, engenheira de software full stack baseada em Ilhota, SC. Transformo problemas complexos em sistemas simples de usar, estáveis e prontos para crescer.</p><p>Minha trajetória passa por plataformas SaaS, sistemas corporativos, APIs de alto tráfego e soluções com inteligência artificial. Em cada projeto, uno arquitetura sólida, código limpo e uma experiência de uso cuidadosa.</p><p>Gosto de liderar pelo exemplo: revisar código com generosidade, documentar decisões e ensinar o que aprendo. Acredito que um bom time entrega mais do que a soma de seus talentos individuais.</p><p>Hoje busco desafios em que engenharia e produto caminham juntos, com impacto real para pessoas e negócios.</p></div><div class="card r"><h3>Em resumo</h3><ul class="fx"><li><span>Localização</span>Ilhota, SC — Brasil</li><li><span>Função</span>Engenheira de Software Full Stack</li><li><span>Foco</span>Arquitetura, APIs e plataformas escaláveis</li><li><span>Stack principal</span>TypeScript, Go, Python, React, Node.js</li><li><span>Nuvem e DevOps</span>AWS, Kubernetes, Terraform</li><li><span>Formação</span>Engenharia de Software · Universidade Horizonte</li><li><span>Idiomas</span>Português (nativo) · Inglês (avançado) · Espanhol (intermediário)</li><li><span>Disponibilidade</span>Aberta a novas oportunidades</li></ul></div></div><h3 class="sh r">Competências principais</h3><div class="bars r">${[["TypeScript",95],["React",92],["PostgreSQL",90],["Node.js e Go",88],["Python e IA",86],["AWS e Nuvem",85]].map(b=>`<div><span>${b[0]}<span>${b[1]}%</span></span><i style="--w:${b[1]}%"></i></div>`).join("")}</div><h3 class="sh r">Princípios e valores</h3>`+grid([["Perfil Profissional","Engenheira de software com experiência em sistemas full stack, liderança técnica e entrega contínua.","PERFIL"],["Filosofia de Engenharia","Software bom é simples, testável e evolui sem medo. Complexidade é um custo, não um troféu.","FILOSOFIA"],["Minha Abordagem","Entender o problema antes da solução, validar cedo e medir resultados.","ABORDAGEM"],["Valores Essenciais","Clareza, responsabilidade, colaboração e aprendizado contínuo.","VALORES"],["O que me move","Resolver problemas difíceis com elegância e ver a tecnologia melhorar a vida de pessoas reais.","MOTIVAÇÃO"],["Fora do código","Estudo constante, leitura, música e tempo ao ar livre: o que recarrega as ideias.","PESSOAL"]]));
+h+=sec("expertise","Expertise técnica","Disciplinas que domino","Do backend à nuvem, passando por segurança e inteligência artificial.",grid([["Engenharia de Software","Padrões de projeto, SOLID, código limpo, TDD e revisão de código.","ENGENHARIA DE SOFTWARE"],["Desenvolvimento Backend","Serviços de alta performance, filas, cache e persistência.","BACKEND"],["Desenvolvimento Frontend","Interfaces acessíveis, rápidas e com microinterações.","FRONTEND"],["Desenvolvimento Full Stack","Entrega de ponta a ponta, do banco de dados ao pixel.","FULL STACK"],["Arquitetura de Sistemas","Microsserviços, DDD, sistemas distribuídos e alta disponibilidade.","ARQUITETURA"],["Nuvem e DevOps","Infraestrutura como código, CI/CD, containers e observabilidade.","NUVEM E DEVOPS"],["Bancos de Dados","Modelagem, ajuste de desempenho, replicação e migrações seguras.","BANCOS DE DADOS"],["Cibersegurança","OWASP, modelagem de ameaças, gestão de segredos e privilégio mínimo.","SEGURANÇA"],["Desenvolvimento de APIs","REST, GraphQL, gRPC, versionamento e documentação OpenAPI.","APIS"],["IA e Machine Learning","Modelos, RAG e integração de IA em produtos.","IA E ML"]]));
+const TK=a=>{const x=a.map(t=>`<span>${t}</span>`).join("");return x+x};
+h+=`<div class="rb" aria-hidden="true"><div class="tk a" style="--sp:38s">${TK(["🌐 Internet","📡 Redes","🔒 Cibersegurança","☁ Computação em nuvem","⚡ APIs","🛰 5G e IoT","🔗 Blockchain","📶 Wi-Fi 6","🧭 DNS e HTTP/3","🧩 Microsserviços","🕸 Web moderna","📱 Mobile","🛡 Criptografia","🔌 Conectividade"])}</div><div class="tk b" style="--sp:54s">${TK(["{ } Desenvolvimento","🤖 Inteligência Artificial","📊 Big Data","🗄 Bancos de Dados","🐧 Linux","🐳 Containers","⎈ Kubernetes","🛠 DevOps","🔍 Machine Learning","🧪 Testes automatizados","🚀 Deploy contínuo","🎨 UX/UI","💾 Armazenamento","🖥 Edge Computing"])}</div></div>`;
+h+=sec("stack","Stack tecnológica","Stack tecnológica interativa","Escolha uma categoria.",`<div class="tabs" id="tabs">${Object.keys(STACK).map((k,i)=>`<button class="${i?"":"on"}">${k}</button>`).join("")}</div><div class="card" id="sc"></div>`);
+h+=sec("architecture","Arquitetura de sistemas","Arquitetura de sistemas interativa","Clique nas camadas para ver como penso cada parte.",`<div class="arch" id="ar">${ARCH.map((a,i)=>`${i?"<span>→</span>":""}<button class="${i?"":"on"}">${a[0]}</button>`).join("")}</div><div class="card" id="ad"></div>`);
+h+=sec("projects","Projetos e estudos de caso","Projetos em destaque","Filtre por categoria. Substitua pelos seus projetos reais.",`<div class="flt" id="fl"></div><div class="grid" id="pg"></div>`);
+h+=sec("code","Por trás do código · Padrões de engenharia","Visualização de código","Padrões que sigo: contratos explícitos, dependências invertidas e testes primeiro.",`<pre class="code"><span class="c3">// Domain-driven + hexagonal: o domínio não conhece a infraestrutura</span>
+<span class="c1">interface</span> <span class="c2">RepositorioDePedidos</span> { salvar(p: Pedido): Promise&lt;void&gt; }
+
+<span class="c1">class</span> <span class="c2">RealizarPedido</span> {
+  <span class="c1">constructor</span>(<span class="c1">private</span> repo: RepositorioDePedidos, <span class="c1">private</span> bus: BarramentoDeEventos) {}
+  <span class="c1">async</span> executar(cmd: ComandoRealizarPedido) {
+    <span class="c1">const</span> pedido = Pedido.criar(cmd);   <span class="c3">// regras no domínio</span>
+    <span class="c1">await</span> <span class="c1">this</span>.repo.salvar(pedido);
+    <span class="c1">await</span> <span class="c1">this</span>.bus.publicar(pedido.eventos());
+  }
+}</pre>`);
+h+=sec("experience","Experiência profissional · Linha do tempo da carreira","Experiência e liderança",EXP.join(" · "),`<div class="tl">${[["2023 — ATUAL","Engenheira de Software Sênior · Nexora Sistemas","Liderança técnica, arquitetura de plataforma e mentoria de equipe."],["2020 — 2023","Engenheira de Software · Lumina Tech","Microsserviços, APIs e otimização de performance em larga escala."],["2018 — 2020","Desenvolvedora Full Stack · Vértice Digital","Produtos web e mobile do zero até a produção."]].map(e=>`<div class="r"><b>${e[0]}</b><h3>${e[1]}</h3><p style="color:var(--mut)">${e[2]}</p></div>`).join("")}</div>`);
+h+=sec("senior","Diferenciais de um portfólio sênior","O que diferencia um profissional sênior","Princípios de engenharia aplicados no dia a dia.",`<div class="r">${chips(["Arquitetura de Sistemas","Princípios de Engenharia","Padrões de Projeto","Código Limpo","Princípios SOLID","Domain-Driven Design","Microsserviços","Sistemas Distribuídos","Alta Disponibilidade","Sistemas Escaláveis","Testes Automatizados","Documentação Técnica"])}</div>`);
+h+=sec("process","Processo de desenvolvimento · Fluxo de trabalho","Do problema à produção","Metodologia de projeto, fluxo de trabalho e padrões de engenharia.",grid([["1. Descoberta","Entender usuários, restrições e métricas de sucesso."],["2. Desenho","Registros de decisão, diagramas e contratos de API revisados."],["3. Construção","Entrega incremental, CI/CD e testes automatizados."],["4. Operação","Observabilidade, SLOs e melhoria contínua."]]));
+h+=sec("certifications","Certificações · Conquistas","Certificações e conquistas","Substitua pelos seus certificados.",grid([["AWS Solutions Architect","Associate · 2024"],["Kubernetes (CKA)","Administradora Certificada · 2023"],["Palestrante em evento de tecnologia","Arquitetura e boas práticas"]]));
+h+=sec("insights","Insights técnicos · Blog de engenharia","Artigos e Centro de Conhecimento","Pesquisa e inovação, tecnologias do futuro.",grid([["Quando microsserviços são um erro","Critérios para decidir entre monólito modular e serviços.","ARTIGO"],["Idempotência em sistemas de pagamento","Padrões práticos para evitar cobranças duplicadas.","ARTIGO"],["RAG em produção","Lições ao levar busca semântica para usuários reais.","PESQUISA"],["Do clique à página: a viagem de uma requisição pela internet","DNS, TCP, TLS e HTTP: o que acontece em milissegundos entre digitar um endereço e ver o site.","INTERNET"],["HTTP/3 e QUIC: por que a web ficou mais rápida","Como o QUIC reduz a latência e melhora a navegação em redes instáveis.","INTERNET"],["HTTPS, certificados e privacidade: segurança na web","Entenda o que o cadeado do navegador protege e o que ele não protege.","SEGURANÇA"]]));
+h+=sec("github","Contribuições no GitHub","Contribuições","Código aberto e projetos pessoais.",`<div class="card r"><div class="gh" id="gh"></div><a class="btn" href="https://github.com/anauaoliveira" rel="noopener">VER GITHUB</a></div>`);
+h+=sec("testimonials","Recomendações · Depoimentos de clientes","Recomendações","O que dizem as pessoas com quem trabalhei.",grid([["“Entrega consistente, comunicação clara e uma visão de arquitetura rara. A Anauã elevou o padrão técnico de toda a plataforma.”","<strong>Mariana Albuquerque</strong><br>Diretora de Tecnologia · Nexora Sistemas","DEPOIMENTO"],["“Transformou requisitos confusos em um produto sólido, no prazo. Uma parceira em quem confio de olhos fechados.”","<strong>Rafael Cardoso</strong><br>Gerente de Produto · Lumina Tech","DEPOIMENTO"],["“Mentora generosa e engenheira exigente. O time inteiro evoluiu com ela, e a qualidade do código é referência.”","<strong>Camila Fontes</strong><br>Líder de Engenharia · Vértice Digital","DEPOIMENTO"],["“Rara combinação de visão técnica e sensibilidade de produto. Nossa plataforma ficou mais rápida, segura e simples de evoluir.”","<strong>Thiago Nascimento</strong><br>Arquiteto de Soluções · Orbis Cloud","DEPOIMENTO"],["“Comunicação transparente, prazos cumpridos e soluções criativas para problemas difíceis. Trabalhar com ela é sempre um acerto.”","<strong>Fernanda Lacerda</strong><br>Diretora de Produto · Pulsar Digital","DEPOIMENTO"],["“Elevou a barra de qualidade do time e deixou boas práticas e documentação que usamos até hoje.”","<strong>Gustavo Ramalho</strong><br>CTO · Aurora Labs","DEPOIMENTO"]]));
+h+=sec("services","Serviços e soluções · Consultoria","Como podemos colaborar","Consultoria, projetos sob demanda e integração com equipes.",grid([["Consultoria","Revisão de arquitetura e roadmap técnico."],["Solicitação de Projetos","Desenvolvimento full stack de ponta a ponta."],["Contato Comercial","Parcerias e propostas corporativas."]]));
+h+=sec("faq","FAQ — Perguntas frequentes","Perguntas frequentes","",FAQ.map(f=>`<details class="r"><summary>${f[0]}</summary><p>${f[1]}</p></details>`).join("")+`<blockquote class="r">Software bom é invisível: simplesmente funciona, e continua funcionando.</blockquote>`);
+h+=sec("contact","Contato · Disponibilidade","Vamos construir algo excepcional","Disponível para novas oportunidades. Respondo em até 48 horas.",`<p class="r"><a class="btn p" href="mailto:anaua.silva49@hotmail.com?subject=Agendar%20reuni%C3%A3o">AGENDAR UMA REUNIÃO</a><a class="btn" href="cv-anaua-oliveira.pdf" download>BAIXAR CURRÍCULO</a></p><form id="cf" class="r"><input name="n" placeholder="Seu nome" required aria-label="Nome"><input name="e" type="email" placeholder="Seu e-mail" required aria-label="E-mail"><textarea name="m" rows="4" placeholder="Conte sobre o projeto" required aria-label="Mensagem"></textarea><button class="btn p">ENVIAR MENSAGEM</button></form>`);
+$("#root").innerHTML=h;
+$("#core").innerHTML=[["⚛","React"],["⬢","Node.js"],["🐍","Python"],["☕","Java"],["aws","AWS"],["🐳","Docker"],["⌥","GitHub"]].map(x=>`<span title="${x[1]}" aria-label="${x[1]}">${x[0]}</span>`).join("");
+$("#core").innerHTML=$("#core").innerHTML.repeat(8);
+$("#nav").innerHTML=NAV.map(n=>`<a href="#${n[0]}">${n[1]}</a>`).join("");
+$("#hn").innerHTML=NAV.map(n=>`<a href="#${n[0]}">${n[1]}</a>`).join("");
+const nso=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)$$("#hn a").forEach(a=>a.classList.toggle("on",a.getAttribute("href")=="#"+e.target.id))}),{rootMargin:"-45% 0px -50% 0px"});
+$$("section[id]").forEach(x=>nso.observe(x));
+/* menu */
+const mn=$("#mn"),mb=$("#mb"),tgm=v=>{mn.classList.toggle("on",v);mb.setAttribute("aria-expanded",v);mb.textContent=v?"FECHAR ✕":"MENU ☰"};
+mb.onclick=()=>tgm(!mn.classList.contains("on"));mn.onclick=e=>{if(e.target.closest("a"))tgm(false)};
+/* tema */
+const R=document.documentElement;let th="dark";
+try{th=localStorage.getItem("th")||(matchMedia("(prefers-color-scheme: light)").matches?"light":"dark")}catch(e){}
+R.dataset.theme=th;
+$("#tg").onclick=()=>{th=th=="dark"?"light":"dark";R.dataset.theme=th;try{localStorage.setItem("th",th)}catch(e){}};
+/* stack */
+const ks=Object.keys(STACK);const sc=k=>$("#sc").innerHTML=`<h3>${k}</h3><p style="margin-top:8px">${chips(STACK[k])}</p>`;sc(ks[0]);
+$$("#tabs button").forEach(b=>b.onclick=()=>{$$("#tabs button").forEach(x=>x.classList.remove("on"));b.classList.add("on");sc(b.textContent)});
+/* arquitetura */
+const ad=i=>{$$("#ar button").forEach((b,j)=>b.classList.toggle("on",i==j));$("#ad").innerHTML=`<h3>${ARCH[i][0]}</h3><p>${ARCH[i][1]}</p>`};ad(0);
+$$("#ar button").forEach((b,i)=>b.onclick=()=>ad(i));
+/* projetos */
+const cats=["Todos","Destaques",...new Set(PROJ.map(p=>p[1]))];
+const pr=c=>$("#pg").innerHTML=PROJ.filter((p,i)=>c=="Todos"||(c=="Destaques"?i<4:p[1]==c)).map(p=>`<article class="card"><span class="t">${p[1].toUpperCase()}</span><h3>${p[0]}</h3><p>${p[2]}</p><p style="margin:8px 0">${chips(p[3].split(" · "))}</p><a class="chip" href="#" style="color:var(--acc)">Demonstração ao vivo</a><a class="chip" href="#">Código-fonte</a></article>`).join("");pr("Todos");
+$("#fl").innerHTML=cats.map((c,i)=>`<button class="${i?"":"on"}">${c}</button>`).join("");
+$$("#fl button").forEach(b=>b.onclick=()=>{$$("#fl button").forEach(x=>x.classList.remove("on"));b.classList.add("on");pr(b.textContent)});
+/* grade do GitHub (decorativa) */
+let sd=7;$("#gh").innerHTML=Array.from({length:182},()=>{sd=(sd*9301+49297)%233280;return`<i style="opacity:${(.12+sd/233280*.88).toFixed(2)}"></i>`}).join("");
+/* contato */
+$("#cf").onsubmit=e=>{e.preventDefault();const f=new FormData(e.target);location.href=`mailto:anaua.silva49@hotmail.com?subject=${encodeURIComponent("Contato via portfólio — "+f.get("n"))}&body=${encodeURIComponent(f.get("m")+"\n\n"+f.get("e"))}`};
+/* terminal */
+const L=["const criarImpacto = () => {","  return {","    codigo: paixao,","    inovacao: true,","    impacto: 'global'","  };","};","","criarImpacto();","// ideias viram sistemas que escalam"].join("\n");const tp=$("#tp");
+if(matchMedia("(prefers-reduced-motion: reduce)").matches)tp.textContent=L;else{let i=0;const t=setInterval(()=>{tp.textContent=L.slice(0,++i);if(i>=L.length)clearInterval(t)},38)}
+const t0=Date.now();setInterval(()=>{const s=Math.floor((Date.now()-t0)/1e3);$("#up").textContent="TODOS OS SISTEMAS OPERACIONAIS · sessão "+String(Math.floor(s/60)).padStart(2,"0")+":"+String(s%60).padStart(2,"0")},1000);
+/* revelação, contadores e destaque do menu */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");const n=$("[data-n]",e.target);if(n&&!n.d){n.d=1;const T=+n.dataset.n,st=performance.now();(function f(t){const p=Math.min((t-st)/1200,1);n.textContent=(T%1?(T*p).toFixed(1).replace(".",","):Math.round(T*p))+n.dataset.s;if(p<1)requestAnimationFrame(f)})(st)}io.unobserve(e.target)}}),{threshold:.12});
+$$(".r").forEach(e=>io.observe(e));
+/* inclinação 3D */
+const tm=$("#tm");tm.parentElement.onmousemove=e=>{const r=tm.getBoundingClientRect();tm.style.transform=`perspective(800px) rotateY(${((e.clientX-r.left)/r.width-.5)*10}deg) rotateX(${(.5-(e.clientY-r.top)/r.height)*10}deg)`};tm.parentElement.onmouseleave=()=>tm.style.transform="";
+/* partículas */
+(()=>{const c=$("#bg"),x=c.getContext("2d");if(matchMedia("(prefers-reduced-motion: reduce)").matches)return;let w,h,P=[];const rs=()=>{w=c.width=innerWidth;h=c.height=innerHeight;P=Array.from({length:Math.min(60,w/20)},()=>({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.3}))};rs();addEventListener("resize",rs);
+(function f(){x.clearRect(0,0,w,h);const col=getComputedStyle(R).getPropertyValue("--acc").trim();x.fillStyle=col;x.strokeStyle=col;P.forEach((p,i)=>{p.x=(p.x+p.vx+w)%w;p.y=(p.y+p.vy+h)%h;x.globalAlpha=.5;x.fillRect(p.x,p.y,2,2);for(let j=i+1;j<P.length;j++){const d=Math.hypot(p.x-P[j].x,p.y-P[j].y);if(d<110){x.globalAlpha=.12*(1-d/110);x.beginPath();x.moveTo(p.x,p.y);x.lineTo(P[j].x,P[j].y);x.stroke()}}});requestAnimationFrame(f)})()})();
+/* documentos legais */
+const DOCS={priv:["Política de Privacidade",[["1. Quem somos","Este site é o portfólio profissional de Anauã Oliveira, engenheira de software em Ilhota, SC. Ela é a responsável (controladora) pelos dados tratados aqui, conforme a Lei Geral de Proteção de Dados (LGPD, Lei nº 13.709/2018). Contato: anaua.silva49@hotmail.com."],["2. Dados que podem ser tratados","Formulário de contato: nome, e-mail e mensagem, enviados por meio do seu aplicativo de e-mail. Chat Core AI: as mensagens digitadas são processadas por um serviço de inteligência artificial para gerar respostas, então evite informar dados pessoais ou sensíveis. Preferência de tema (claro ou escuro): fica salva somente no seu navegador."],["3. Cookies e rastreamento","Este site não usa cookies de rastreamento, de publicidade nem ferramentas de análise que identifiquem você."],["4. Finalidades","Responder aos seus contatos, avaliar propostas profissionais, lembrar sua preferência de tema e oferecer o assistente Core AI."],["5. Compartilhamento","Não vendemos nem cedemos seus dados. Alguns recursos dependem de terceiros: as fontes de letras são carregadas dos servidores do Google e o chat Core AI usa um serviço de IA. Os links para GitHub e LinkedIn levam a sites externos, com políticas próprias."],["6. Armazenamento","As mensagens enviadas por e-mail são guardadas pelo tempo necessário para o atendimento e para eventuais obrigações legais, e depois eliminadas."],["7. Seus direitos","Você pode solicitar confirmação do tratamento, acesso, correção, anonimização, eliminação, portabilidade e informações sobre compartilhamento, além de revogar consentimentos, escrevendo para o e-mail de contato."],["8. Segurança","Adotamos medidas técnicas razoáveis para proteger as informações, mas nenhuma transmissão pela internet é totalmente livre de riscos."],["9. Alterações","Esta política pode ser atualizada a qualquer momento. A data da última revisão aparece no topo desta página."]]],term:["Termos de Uso",[["1. Aceitação","Ao acessar este site, você concorda com estes Termos de Uso. Se não concordar, deixe de utilizá-lo."],["2. Finalidade do site","O site apresenta o trabalho profissional de Anauã Oliveira. As informações têm caráter informativo e não constituem proposta comercial vinculante."],["3. Propriedade intelectual","Textos, design, código, marca e demais conteúdos pertencem a Anauã Oliveira, salvo indicação em contrário. É proibida a cópia ou a reutilização sem autorização prévia por escrito."],["4. Uso adequado","Você se compromete a não tentar invadir, sobrecarregar ou prejudicar o site, nem usá-lo para fins ilícitos, ofensivos ou de envio de spam."],["5. Assistente Core AI","As respostas são geradas automaticamente e podem conter imprecisões. Não substituem orientação profissional. Não compartilhe senhas, dados bancários ou informações sensíveis no chat."],["6. Links de terceiros","Links externos levam a sites que não são controlados por este portfólio. A responsabilidade pelo conteúdo é de seus respectivos titulares."],["7. Isenção de garantias","O site é oferecido como está, sem garantia de disponibilidade contínua. Na máxima extensão permitida em lei, não nos responsabilizamos por danos decorrentes do seu uso."],["8. Privacidade","O tratamento de dados pessoais segue a Política de Privacidade."],["9. Alterações","Estes termos podem ser alterados a qualquer momento. O uso continuado do site indica concordância com a versão vigente."],["10. Lei aplicável","Estes termos são regidos pelas leis da República Federativa do Brasil."]]]};
+const lg=$("#lg"),shut=()=>lg.classList.remove("on");
+const openDoc=k=>{$("#lgt").textContent=DOCS[k][0];$("#lgb").innerHTML=`<p class="k">Última atualização: 21 de novembro de 2026</p>`+DOCS[k][1].map(x=>`<h3>${x[0]}</h3><p>${x[1]}</p>`).join("");lg.classList.add("on");$(".mb",lg).scrollTop=0;$("#lgx").focus()};
+$$("[data-doc]").forEach(a=>a.onclick=e=>{e.preventDefault();openDoc(a.dataset.doc)});
+$("#lgx").onclick=shut;lg.onclick=e=>{if(e.target==lg)shut()};addEventListener("keydown",e=>{if(e.key=="Escape")shut()});
+/* fundo tecnológico */
+(()=>{const T=["{ }","</>","01","API","SQL","IA","λ","#!","git","k8s","TCP/IP","HTTP","JSON","CPU","Docker","AWS","React","Go","Python","0xFF","SSH","DNS","ML","CI/CD","⌘","⚙","☁","⚡","◈","10110"],b=$("#tech");T.concat(T.slice(0,14)).forEach((t,i)=>{const s=document.createElement("span");s.textContent=t;s.style.cssText=`left:${(i*37+Math.random()*30)%96}%;top:${(i*23+Math.random()*40)%94}%;--sz:${(.8+Math.random()*1.6).toFixed(2)}rem;--c:var(${i%3?"--acc":"--acc2"});--d:${(5+Math.random()*7).toFixed(1)}s`;b.append(s)})})();
+/* paleta de comandos */
+const cp=$("#cp"),ci=$("#ci"),cl=$("#cl");
+const items=[["home","INÍCIO"],...$$("section[id]").filter(s=>$(".k",s)).map(s=>[s.id,$(".k",s).textContent])];
+const rl=q=>cl.innerHTML=items.filter(i=>i[1].toLowerCase().includes(q.toLowerCase())).slice(0,9).map((i,n)=>`<a href="#${i[0]}" class="${n?"":"f"}">${i[1]}</a>`).join("");
+const op=()=>{cp.classList.add("on");ci.value="";rl("");ci.focus()};
+$("#cpb").onclick=op;addEventListener("keydown",e=>{if((e.metaKey||e.ctrlKey)&&e.key=="k"){e.preventDefault();op()}if(e.key=="Escape"){cp.classList.remove("on");tgm(false)}});
+ci.oninput=()=>rl(ci.value);ci.onkeydown=e=>{if(e.key=="Enter"){const a=$("a",cl);if(a)a.click()}};cp.onclick=e=>{if(e.target.closest("a")||e.target==cp)cp.classList.remove("on")};
+/* Core AI */
+const am=$("#am"),say=(t,u)=>{const p=document.createElement("p");p.textContent=t;if(u)p.className="u";am.append(p);am.scrollTop=am.scrollHeight};
+say("Olá! Sou a Core AI, assistente virtual da Anauã Maria. Pergunte-me sobre a stack Full-Stack dela, decisões de arquitetura nos projetos ou experiência com lançamento de produtos em startups!");
+$("#ab").onclick=()=>$("#aw").classList.toggle("on");
+const KB=[["stack|tecnolog|linguagem","A stack principal é TypeScript, Go, Python, React, Node.js, PostgreSQL, AWS e Kubernetes. Veja a seção Stack tecnológica."],["arquitet|microsserv|sistema","Ela prioriza DDD, serviços desacoplados por eventos e decisões documentadas. Teste o diagrama interativo em Arquitetura de sistemas."],["startup|produto|lançamento","A Anauã tem experiência levando produtos do zero à produção, com entrega incremental e foco em métricas."],["contato|email|falar|contratar","Use o formulário na seção Contato ou o botão Agendar uma reunião."],["curr|cv","O botão Baixar currículo está no topo e na seção Contato."]];
+const hist=[];let busy=0,smp;
+const SYS="Você é a Core AI, um mini robô simpático, profissional e levemente bem-humorado, assistente virtual do portfólio de Anauã Maria, engenheira de software em Ilhota, SC. Responda sempre em português do Brasil. Responda a QUALQUER dúvida sobre tecnologia da informação, programação, redes, internet, dados, bancos de dados, nuvem, segurança, inteligência artificial, hardware, sistemas operacionais e carreira em tecnologia, com clareza, exemplos curtos e no máximo 120 palavras, sem tabelas. Se a pergunta fugir totalmente de tecnologia, diga com gentileza que seu foco é tecnologia e convide a pessoa a perguntar algo da área. Sobre a Anauã, afirme apenas: é engenheira full stack, usa TypeScript, Go, Python, React, Node.js, PostgreSQL, AWS e Kubernetes, e pode ser contatada pela seção Contato do site. Não invente outros fatos sobre ela.";
+$("#af").onsubmit=async e=>{e.preventDefault();const q=$("#aq").value.trim();if(!q||busy)return;say(q,1);$("#aq").value="";busy=1;const p=document.createElement("p");p.textContent="Pensando…";am.append(p);am.scrollTop=am.scrollHeight;
+try{smp=smp||await claude.use("sample");if(!smp)throw 0;const tr=hist.slice(-8).map(m=>m[0]+": "+m[1]).join("\n");const r=await smp(SYS+"\n\nConversa até agora:\n"+tr+"\nUsuário: "+q+"\nCore AI:",{modelTier:"quick",cache:false,onText:({text})=>{p.textContent=text;am.scrollTop=am.scrollHeight}});p.textContent=r.text;hist.push(["Usuário",q],["Core AI",r.text])}
+catch(x){const k=KB.find(k=>new RegExp(k[0],"i").test(q));p.textContent=k?k[1]:"Não consegui consultar meu cérebro de silício agora. 🤖 Tente de novo ou fale com a Anauã na seção Contato."}
+busy=0};
+/* pré-loader */
+const off=()=>$("#pre").classList.add("off");addEventListener("load",()=>setTimeout(off,900));setTimeout(off,2800);
+</script>
+</body>
+</html>
